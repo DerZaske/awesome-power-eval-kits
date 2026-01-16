@@ -1,17 +1,18 @@
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Wissenschaftlicher Bericht – LaTeX Template
-% Autor: Fabian Zaske
+% Scientific Report – LaTeX Template
+% Author: Fabian Zaske
 % Version: 1.0
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[12pt,a4paper]{article}
 
 % -----------------------------------------------------------
-% -------------------- Pakete -------------------------------
+% -------------------- Packages ------------------------------
 % -----------------------------------------------------------
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[ngerman]{babel}
+\usepackage[english]{babel}
 
 \usepackage{amsmath, amssymb}
 \usepackage{graphicx}
@@ -39,38 +40,38 @@
 }
 
 % -----------------------------------------------------------
-% -------------------- Dokument ------------------------------
+% -------------------- Document -------------------------------
 % -----------------------------------------------------------
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% -------------------- TITELSEITE ----------------------------
+% -------------------- TITLE PAGE ----------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{titlepage}
     \centering
 
-    % Hochschullogo (Dummy)
+    % University logo (placeholder)
     \vspace*{1cm}
     \includegraphics[width=0.4\textwidth]{images/hochschul_logo.png}
 
     \vspace{2cm}
 
     {\Large HTWG Konstanz}\\[0.5cm]
-    {\large Fakultät Elektrotechnik und Informationstechnik}
+    {\large Faculty of Electrical Engineering and Information Technology}
 
     \vspace{2.5cm}
 
     {\huge\bfseries Power Electronics}\\[0.5cm]
-    {\Large Reverse engineering of Active Clamp Flyback demonstration board}
+    {\Large Reverse Engineering of an Active Clamp Flyback Demonstration Board}
 
     \vspace{2cm}
 
     \begin{tabular}{rl}
-        Autor: & Fabian Zaske \\
-        Matrikelnummer: & 302871 \\
-        Studiengang: & Elektrische Systeme (EIM) \\
-        Betreuer: & Riccardo Tinivella \\
-        Datum: & \today
+        Author: & Fabian Zaske \\
+        Student ID: & 302871 \\
+        Degree Program: & Electrical Systems Engineering (EIM) \\
+        Supervisor: & Riccardo Tinivella \\
+        Date: & \today
     \end{tabular}
 
     \vfill
@@ -82,7 +83,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 
-  \blindtext
+\blindtext[1]
 
 \end{abstract}
 
@@ -91,49 +92,40 @@
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% -------------------- EINLEITUNG -----------------------------
+% -------------------- INTRODUCTION --------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Einleitung}
-In der Einleitung wird das Thema motiviert, der Kontext beschrieben und das Ziel der Arbeit erläutert.
-
-\blindtext[2]
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Bestimmung der Bauelemente}
-
-    
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Ergebnisse}
-In diesem Kapitel werden die Ergebnisse präsentiert und beschrieben.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Diskussion}
-Die Ergebnisse werden interpretiert, verglichen und kritisch bewertet.
-
-\blindtext[1]
+\section{Board Specifications}
+\begin{description}
+  \item[Topology:] Active Clamp Flyback
+  \item[Input voltage range:] 90–264 V AC, 47–63 Hz (typ. 230 V AC)
+  \item[Output voltages:] Selectable 5, 9, 12, 15, 20 V DC
+  \item[Switching frequency:] Up to 500 kHz
+  \item[Main power switches:] GaN transistors
+  \item[Magnetic components:] Transformer
+  \item[Main capacitors:] 
+    \begin{itemize}
+      \item Input: $\sim$120 µF
+      \item Output: $2 \times 330\,\mu$F + $3 \times 22\,\mu$F
+    \end{itemize}
+  \item[clamp networks:] active clamping
+  \item[SR Controller:] SRK1004
+   
+\end{description}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Fazit}
-Zusammenfassung der Arbeit sowie ein Ausblick auf mögliche Weiterentwicklungen.
-
-\blindtext[1]
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% -------------------- LITERATUR ------------------------------
+% -------------------- REFERENCES ----------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{thebibliography}{9}
 
 \bibitem{ref1}
-A. Autor,
-\textit{Titel des Buches},
-Verlag, Jahr.
+A. Author,
+\textit{Title of the Book},
+Publisher, Year.
 
 \bibitem{ref2}
-B. Autor,
-„Titel des Papers“,
-\textit{Journal}, Jahr.
+B. Author,
+``Title of the Paper,''
+\textit{Journal Name}, Year.
 
 \end{thebibliography}
 
